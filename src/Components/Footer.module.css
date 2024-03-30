@@ -1,0 +1,11 @@
+footer.light {
+  /* Estilos para el tema light */
+  background-color: white;
+  color: black;
+}
+
+footer.dark {
+  /* Estilos para el tema dark */
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,29 @@
+/* Estilos para el tema claro */
+.light {
+  background-color: white;
+  color: black;
+}
+
+.light a {
+  color: black;
+}
+
+.light button {
+  background-color: black;
+  color: white;
+}
+
+/* Estilos para el tema oscuro */
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark button {
+  background-color: white;
+  color: black;
+}
