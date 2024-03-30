@@ -1,29 +1,40 @@
-/* Estilos para el tema claro */
-.light {
-  background-color: white;
-  color: black;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bgColor);
+  color: var(--fontColor);
 }
 
-.light a {
-  color: black;
+.navbarFixed {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 90%;
 }
 
-.light button {
-  background-color: black;
-  color: white;
+.navbar h1 {
+  margin: 0;
 }
 
-/* Estilos para el tema oscuro */
-.dark {
-  background-color: black;
-  color: white;
+.navbar .navbarFixed .navTitle {
+  display: flex;
+  gap: 1rem;
 }
 
-.dark a {
-  color: white;
+.navbar .navbarFixed .navTitle h3 {
+  margin: 0;
 }
 
-.dark button {
-  background-color: white;
-  color: black;
+.themeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.active-link {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  border-bottom: thin solid #f00;
 }

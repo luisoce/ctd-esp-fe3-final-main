@@ -1,32 +1,27 @@
-import React, { useContext } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AppProvider, AppContext } from "./Context/Dark-mode";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import { Home } from "./Pages/Home";
 import Footer from "./Components/Footer";
-import { Contacto } from "./Pages/Contacto";
+import Home from "./Routes/Home";
+import Contact from "./Routes/Contact";
+import Favs from "./Routes/Favs";
+import Detail from "./Routes/Detail";
+import NotFound from "./Routes/NotFound";
+import { useContextGlobal } from "./Components/utils/global.context";
 
 function App() {
-  return (
-    <AppProvider>
-      <AppContent />
-    </AppProvider>
-  );
-}
+  const { toggleTheme } = useContextGlobal();
 
-function AppContent() {
-  const { theme } = useContext(AppContext);
   return (
-    <div className={`App ${theme}`}>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/favs" element={<Contacto />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+    <div className={`${toggleTheme} indexApp`}>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/favs" element={<Favs />} />
+        <Route path="/detail/:id" element={<Detail />} />
+        <Route component={NotFound} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

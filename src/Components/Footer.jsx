@@ -1,14 +1,16 @@
-import React, { useContext } from "react";
-import { AppContext } from "../Context/Dark-mode";
-import styles from "./Footer.module.css";
-
 const Footer = () => {
-  const { theme } = useContext(AppContext);
-
   return (
-    <footer className={theme === "light" ? styles.light : styles.dark}>
-      <p>Powered by</p>
-      <img src="./img/DH.png" alt="DH-logo" />
+    <footer>
+      <div>
+        <p>Powered by</p>
+        <img src="../../public/images/DH.png" alt="DH-logo" />
+      </div>
+      <div>
+        <img src="../../public/images/ico-facebook.png" alt="facebookIcon" />
+        <img src="../../public/images/ico-instagram.png" alt="instagramIcon" />
+        <img src="../../public/images/ico-whatsapp.png" alt="whatsappIcon" />
+        <img src="../../public/images/ico-tiktok.png" alt="tiktokIcon" />
+      </div>
     </footer>
   );
 };
